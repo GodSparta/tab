@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+			Registrate
+		</ion-title>
+	</ion-toolbar>
+	
+</ion-header>
+  <ion-content padding>
+			<ion-button fill="solid" color="primary" (click)="pushIngresarNavCtrl()"><small>¿Ya tienes una cuenta?, Ingresa aqui</small></ion-button>
+	  <ion-list>
+  
+		  <ion-item>
+			<ion-label position="floating">Nombre</ion-label>
+			<ion-input type="text" [(ngModel)]="username"></ion-input>
+		  </ion-item>
+		
+		  <ion-item>
+			<ion-label position="floating">Contraseña</ion-label>
+			<ion-input type="password" [(ngModel)]="password"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+			<ion-label position="floating">Confirmar contraseña</ion-label>
+			<ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+		  </ion-item>
+		
+		</ion-list>
+  
+		<ion-button fill="solid" expand="block" color="primary" (click)="register()">Registrarse</ion-button>
+
+		<ion-img src="/assets/lokme1.png"></ion-img>
+  </ion-content>

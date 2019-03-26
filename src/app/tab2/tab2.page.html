@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>
+        Adopta
+      </ion-title>
+      <ion-buttons slot="secondary">
+        <ion-button (click)="pushPublicarNavCtrl()">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+        
+        </ion-buttons>
+        <ion-buttons slot="primary" (click)="pushPerfilNavCtrl()">
+          <ion-button>
+            <ion-icon slot="icon-only" name="contact"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+   
+  <ion-content padding>
+    <p *ngIf="images.length == 0" text-center>Please Select Image!</p>
+   
+    <ion-content>
+      
+      
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/gatp1.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle style= "color:rgb(139, 48, 48)"><b>ADOPTA</b></ion-card-subtitle>
+            <ion-card-title>FIFI</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>¿Alguien quiere un gato?</p>
+          </ion-card-content>
+        </ion-card>
+        
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/gato3.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle style= "color:rgb(139, 48, 48)"><b>ADOPTA</b></ion-card-subtitle>
+            <ion-card-title>BOLA DE ALGODON</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Ataca y muerde pero es por la calor</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/perritos5.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle style= "color:rgb(139, 48, 48)"><b>ADOPTA</b></ion-card-subtitle>
+            <ion-card-title>HUSKYS</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Variedad de cachorros huskys</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/perrogordo2.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle style= "color:rgb(139, 48, 48)"><b>ADOPTA</b></ion-card-subtitle>
+            <ion-card-title>BRONSON</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Esta criatura solo se dedica a comer y dormir</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/perrito1.jpeg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle style= "color:rgb(139, 48, 48)"><b>ADOPTA</b></ion-card-subtitle>
+            <ion-card-title>MARTHA</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>No para de "hablar"</p>
+          </ion-card-content>
+        </ion-card>
+  
+        
+  </ion-content>
+  
