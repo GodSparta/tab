@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,13 @@ export class LoginPage implements OnInit {
   constructor(public afAuth: AngularFireAuth,
      public user: UserService,
       public router: Router,
-      public alert: AlertController) { }
+      public alert: AlertController,
+      public navCtrl: NavController
+      ) { }
+
+      pushRegisterNavCtrl(){
+        this.navCtrl.navigateForward('/register');
+      }
 
   ngOnInit() {
   }

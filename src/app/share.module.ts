@@ -16,4 +16,5 @@ import { LoadingComponent } from './loading/loading.component';
   declarations: [LoadingComponent],
   exports: [LoadingComponent]
 })
-export class ShareModule {}
+export class ShareModule {
+}

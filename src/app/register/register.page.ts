@@ -32,7 +32,8 @@ export class RegisterPage implements OnInit {
     pushIngresarNavCtrl(){
       this.navCtrl.navigateForward('/login');
     }
-      
+    
+    
     ngOnInit() {
     }
 

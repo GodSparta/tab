@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-
+import { AngularFireFunctions } from '@angular/fire/functions';
 @Component({
   selector: 'app-tab1',
   templateUrl: './tab1.page.html',
@@ -8,7 +8,10 @@ import { NavController } from '@ionic/angular';
 })
 export class FeedPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  posts
+  sub
+  constructor(private navCtrl: NavController,
+    private aff: AngularFireFunctions) { }
 
     pushPerfilNavCtrl(){
       this.navCtrl.navigateForward('/profile');
@@ -21,6 +24,14 @@ export class FeedPage implements OnInit {
     }
 
   ngOnInit() {
+    const getFeed = this.aff.httpsCallable('getFeed')
+   this.sub = getFeed({}).subscribe(data =>{
+     this.posts = data
+   })
+  }
+
+  ngOnDestroy(){
+    this.sub.unsubscribe()
   }
 
 }
